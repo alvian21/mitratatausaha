@@ -61,8 +61,8 @@
                     </li>
                 </ul>
                 <div class="mb-4 mb-lg-0">
-                    <a href="#" class="btn btn-sm nav-btn btn-primary mb-4 mb-lg-0 ms-auto" data-bs-toggle="modal"
-                        data-bs-target="#exampleModal">Contact Us</a>
+                    <a href="#about-us" class="btn btn-sm nav-btn btn-primary mb-4 mb-lg-0 ms-auto"
+                        data-bs-toggle="modal" data-bs-target="#exampleModal">Contact Us</a>
                 </div>
             </div>
         </div>
@@ -632,15 +632,15 @@
                 <div class="col-lg-3 col-sm-6">
                     <h6 class="mb-3 mt-sm-0 mt-5 text-white">Social Media</h6>
                     <ul class="list-unstyled footer-list">
-                        <li class="py-2"><a class="fs-15" href="https://www.linkedin.com/in/mitratatausaha/" target="blank"><span
-                                    class="icon fs-12 me-2">∎</span> Linkedin</a>
+                        <li class="py-2"><a class="fs-15" href="https://www.linkedin.com/in/mitratatausaha/"
+                                target="blank"><span class="icon fs-12 me-2">∎</span> Linkedin</a>
                         </li>
                         <li class="py-2"><a class="fs-15" href="https://web.facebook.com/mitra.tatausaha/"
                                 target="blank"><span class="icon fs-12 me-2">∎</span> Facebook</a>
                         </li>
                         <li class="py-2"><a class="fs-15"
-                                href="https://instagram.com/cv.mitra_tata_usaha?utm_medium=copy_link" target="blank"><span
-                                    class="icon fs-12 me-2">∎</span> Instagram</a>
+                                href="https://instagram.com/cv.mitra_tata_usaha?utm_medium=copy_link"
+                                target="blank"><span class="icon fs-12 me-2">∎</span> Instagram</a>
                         </li>
 
                     </ul>
@@ -759,6 +759,48 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"
         integrity="sha512-yFjZbTYRCJodnuyGlsKamNE/LlEaEAxSUDe5+u61mV8zzqJVFOH7TnULE2/PP/l5vKWpUNnF4VGVkXh3MjgLsg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        var url = 'https://wati-integration-service.clare.ai/ShopifyWidget/shopifyWidget.js';
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = url;
+        var options = {
+            "enabled": true,
+            "chatButtonSetting": {
+                "backgroundColor": "#4dc247",
+                "ctaText": "",
+                "borderRadius": "25",
+                "marginLeft": "0",
+                "marginBottom": "50",
+                "marginRight": "50",
+                "position": "right"
+            },
+            "brandSetting": {
+                "brandName": "Admin",
+                "brandSubTitle": "Typically replies within a day",
+                "brandImg": "https://cdn.clare.ai/wati/images/WATI_logo_square_2.png",
+                "welcomeText": "Hi!\nApa ada yang bisa saya bantu?",
+                "messageText": "Hello, saya punya pertanyaan terkait mitra tata usaha",
+                "backgroundColor": "#0a5f54",
+                "ctaText": "Start Chat",
+                "borderRadius": "25",
+                "autoShow": false,
+                "phoneNumber": "6282264816880"
+            }
+        };
+        s.onload = function () {
+            CreateWhatsappChatWidget(options);
+        };
+        var x = document.getElementsByTagName('script')[0];
+        x.parentNode.insertBefore(s, x);
+
+        $(document).ready(function () {
+            setTimeout(() => {
+                $('.wa-chat-box-poweredby').remove()
+            }, 1500);
+        })
+    </script>
 </body>
 
 </html>
